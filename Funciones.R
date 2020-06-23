@@ -114,7 +114,7 @@ sentimentplot <- function (df){
   df$score <- df2$ave_sentiment
   df <- df %>% mutate(Tipo = ifelse(score > 0, "Positivo", "Negativo"))
   
-  #fig <- plot_ly(data=count(df,Tipo), labels = ~Tipo, values = ~n, type = 'pie')
+  #fig2 <- plot_ly(data=count(df,Tipo), labels = ~Tipo, values = ~n, type = 'pie')
   
   dfagre <- aggregate(df["score"],by=df["created_at"],mean)
   dfagre <- dfagre %>% mutate(MediaR = rollmean(score, k = 21, align = "right", na.pad = TRUE))
@@ -122,7 +122,23 @@ sentimentplot <- function (df){
   fig <- plot_ly(data=dfagre, x=~created_at,y= ~score,type = 'scatter', mode = 'lines')  %>% 
     add_trace(y = ~MediaR, name = 'Media Movil',mode = 'lines')
   
+  
   return(fig)
+  
+}
+sentimentpie <- function (df){
+  
+  
+  df <- clean_text(df)
+  df2 <- sentiment_by(df$text)
+  df$score <- df2$ave_sentiment
+  df <- df %>% mutate(Tipo = ifelse(score > 0, "Positivo", "Negativo"))
+  
+  fig2 <- plot_ly(data=count(df,Tipo), labels = ~Tipo, values = ~n, type = 'pie')
+  
+ 
+  
+  return(fig2)
   
 }
 
@@ -227,6 +243,25 @@ make_url_html <- function(url) {
   }
 }
 
+densityplot <- function (df){
+  df <- clean_text(df)
+  df <- sentiment_by(df$text)
+  d <- density(df$ave_sentiment)
+  dfden <- data.frame(
+    x= unlist(d$x),
+    y= unlist(d$y)
+    
+    
+  )
+  
+  fig <- plot_ly(dfden,x=~x,y=~y, type = 'scatter', mode = 'lines')
+  
+  return(fig)
+  
+}
+
 custom_stop_words <- bind_rows(stop_words,
                                data_frame(word = tm::stopwords("spanish"),
                                           lexicon = "custom"))
+
+
