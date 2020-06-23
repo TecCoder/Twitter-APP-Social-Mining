@@ -3,8 +3,7 @@ library(shinydashboard)
 library(tidyverse)
 library(rtweet)
 library(tidytext)
-library(RColorBrewer)
-library(wordcloud)
+
 library(wordcloud2)
 library(reactable)
 library(glue)
@@ -15,7 +14,7 @@ library(quanteda)
 
 token <- authentication()
 
-save.image(file="appshiny.RData")
+save.image(file="appshiny.RData")  # Ejecutar este comando si quieres guardar las variables de entorno generadas
 
 ui <- dashboardPage(
   dashboardHeader(title = "Tweet Miner"),
@@ -87,8 +86,8 @@ ui <- dashboardPage(
                                                     selectInput("RT","Incluir RT",c(TRUE,FALSE)),
                                                     submitButton(text="Analyse"))),
               fluidRow(
-        tabBox(
-            width = 12, plotlyOutput("pie", height = "250px") )
+        
+             box( plotlyOutput("pie")),box(plotlyOutput("density")) 
               
             ),
         fluidRow(plotlyOutput("ts"))
@@ -216,9 +215,9 @@ server <- function(input, output,session) {
   output$texto <- renderText("Hola")
   
   output$pie <- renderPlotly({fig2<-sentimentpie(req(twsent()))})
- 
- 
   
+  output$density <- renderPlotly({fig <- densityplot(req(twsent())) }) 
+ 
   output$ts <- renderPlotly({fig<-sentimentplot(req(twsent()))})
   
   output$LDA <- renderPlot({TopicModeler2(twtopicut(),input$maxtopic,input$ngram)})
