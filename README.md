@@ -1,5 +1,5 @@
 # Twitter-APP-Social-Mining
-![](images/main.png)
+![main](/images/main.png)
 ## Project Overview
 The Twitter App social-Mining is a tool to perform queries to Twitter and retrieve useful information with 4 different kinds of visualizations. The 4 main functions of this app are:
 1. Wordcloud
