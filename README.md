@@ -45,3 +45,15 @@ Analyse the sentiment on twitter for a specific topic or an account. Analyse the
 
 ![sentiment1](/images/sentiment1.PNG)
 ![sentiment2](/images/sentiment2.PNG)
+
+## 4. Topic Modeling
+Use Latent Dirichlet allocation to clasify words contained on tweets in differents topics. You can search for topic or username tweets, although username search won't return great results.
+Parametres:
+* Query to search: You may search for just on query or 2, 1 query search is better since it does not overload the application.
+* Number of topics: This is number of topics that the algorithm will clasify the words into.
+* Number of tweets: Recommendation is to search for less than 4000 so it doesn't overload, but it might depend on your computer.
+* Choose the n-gram: Choose beetween 1 or 2 words cluster
+
+![topicmodel1](/images/topicmodel1.PNG)
+
+![topicmodel2](/images/topicmodel2.PNG)
