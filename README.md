@@ -63,4 +63,4 @@ Beta represent the likelyhood of belonging to that topic, therefore words with h
 ## About the Author
 David Álvaro Martínez : Electronic Engineer, data science and information technology enthusiastic. [Linkedin](linkedin.com/in/david-álvaro-martínez-68667b127)
 
-Project developed as Master Thesis at the University of Granada [UGR](https://www.ugr.es/) with [Carlos Molina Fernández](https://www.ujaen.es/departamentos/dinformatica/contactos/molina-fernandez-carlos) Tutoring
+Project developed as Master Thesis at the University of Granada [UGR](https://lsi.ugr.es/lsi/postgrado/mgtpn) with [Carlos Molina Fernández](https://www.ujaen.es/departamentos/dinformatica/contactos/molina-fernandez-carlos) Tutoring
