@@ -25,7 +25,7 @@ and click on Run app button.
 ## 1. Wordcloud
 Search for a query on Twitter and get a visual summary of the published content. 
 Parameters:
-* Query to search: You can either look for single words or hashtag #Election. To search for a particular phrase enclose between backslash \ The Phrase \
+* Query to search: You can either look for single words or hashtag #Election. To search for a particular phrase enclose between backslash `\ The Phrase \`
 * Number of tweets: Up to 10000
 * Number of words: Choose beetween 1 or 2 word cluster.
 * Zoom in: Zoom in the wordcloud and make the letters bigger.
