@@ -39,3 +39,9 @@ Search for a query or an username account and retrieve the last tweets published
 Parameters: You can choose wether you want to include Retweets for your analysis or not.
 
 ![table](/images/table.PNG)
+
+## 3. Sentiment Analysis
+Analyse the sentiment on twitter for a specific topic or an account. Analyse the sentiment score distribution, polarity proportion  and time series of the tweets published (Only English) Sentiment score obtained from the [sentimentr](https://github.com/cran/sentimentr/) package. 
+
+![sentiment1](/images/sentiment1.PNG)
+![sentiment2](/images/sentiment2.PNG)
