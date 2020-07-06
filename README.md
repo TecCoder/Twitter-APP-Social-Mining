@@ -57,3 +57,5 @@ Parametres:
 ![topicmodel1](/images/topicmodel1.PNG)
 
 ![topicmodel2](/images/topicmodel2.PNG)
+
+Beta represent the likelyhood of belonging to that topic, therefore words with highest probabily are showed.
