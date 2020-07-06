@@ -58,7 +58,7 @@ Parametres:
 
 ![topicmodel2](/images/topicmodel2.PNG)
 
-Beta represent the likelyhood of belonging to that topic, therefore words with the highest probabily are showed.
+Beta represent the likelyhood of belonging to that topic, therefore words with the highest probabilities are showed.
 
 ## About the Author
 David Álvaro Martínez : Electronic Engineer, data science and information technology enthusiastic. [Linkedin](linkedin.com/in/david-álvaro-martínez-68667b127)
