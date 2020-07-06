@@ -17,6 +17,16 @@ Notice that the online version might crash when using some functions such as Top
 2. Install all the packages: 
 `install.packages("tidytext")` 
 Some packages may require to install through github: ` library(devtools) install_github('')` 
-3. Download the app script, you can choose either beetween the single file `app.R` or the 2 file version `ui.R` and `server.R`. You can download the `functions.R` and run it before the `app.R`. 2 file version contain the functions as well, in order to run it, place both files in a folder and click on Run app button.
+3. Download the app script, you can choose either beetween the single file `app.R` or the 2 file version `ui.R` and `server.R`. You can download the `functions.R` and run it before the `app.R`. 2 file version contain the functions as well, in order to run it, place both files in a folder, open `server.R` and run first all the functions to the environment, then run the following code for authentication to the API:  `token <- authentication()`
+and click on Run app button.
 
 ![runapp](/images/runapp.PNG)
+
+## 1. Wordcloud
+Search for a query on Twitter and get a visual summary of the published content. 
+Parameters:
+* Query to search: You can either look for single words or hashtag #Election. To search for a particular phrase enclose between backslash \ The Phrase \
+* Number of tweets: Up to 10000
+* Number of words: Choose beetween 1 or 2 word cluster.
+* Zoom in: Zoom in the wordcloud and make the letters bigger.
+* Language: Choose beetween english or spanish
