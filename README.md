@@ -16,7 +16,7 @@ Notice that the online version might crash when using some functions such as Top
 1. The app is built on top of R so the first step is to install the more recent version:[CRAN](https://cran.r-project.org/)
 2. Install all the packages: 
 `install.packages("tidytext")` 
-Some packages may require to install through github: ` library(devtools) install_github('')` 
+Some packages may require to install through github to get the last update: ` library(devtools) install_github('')` 
 3. Download the app script, you can choose either beetween the single file `app.R` or the 2 file version `ui.R` and `server.R`. You can download the `functions.R` and run it before the `app.R`. 2 file version contain the functions as well, in order to run it, place both files in a folder, open `server.R` and run first all the functions to the environment, then run the following code for authentication to the API:  `token <- authentication()`
 and click on Run app button.
 
