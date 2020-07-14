@@ -1,8 +1,8 @@
 authentication <- function (){
-api_key <- "leG8otLsNt4344LHPvBJZPGX7"
-api_secret_key <- "12bvZcWDp8RaooR3Gypo39VCjJS7ZSzXlLeWhiikVfB5pwARHL"
-access_token <- "239048889-sKudn7Y4ZKxRuY1GTymKsueWLWnjcJM8UpuhXEQk"
-access_token_secret <- "DfXPH6Aw1ngJdK5U0tmMogTNotRSZapr6KqTiOqHHDsmZ"
+api_key <- "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+api_secret_key <- "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"             # Include here your  API keys
+access_token <- "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+access_token_secret <- "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 ## authentication 
 token <- create_token(
@@ -59,7 +59,7 @@ TopicModeler2 <- function(df,n,z) {
   if(z==1) {
     df <- df %>%
       select(c(status_id,text)) %>%      #Si no hacemos select podemos destriparlo simplemente para tener todo en una palabra por fila y tweet
-      unnest_tokens(word, text) ## Si la condici髇 se cumple (TRUE)
+      unnest_tokens(word, text) ## Si la condici贸n se cumple (TRUE)
     df <- df %>%
       anti_join(custom_stop_words) %>%
       filter(!word=="t.co" %in% word)
@@ -67,7 +67,7 @@ TopicModeler2 <- function(df,n,z) {
   } else {
     df  <- df %>%
       select(status_id,text) %>%
-      unnest_tokens(paired_words, text, token = "ngrams", n = 2) ## Si la condici髇 no se cumple (FALSE)
+      unnest_tokens(paired_words, text, token = "ngrams", n = 2) ## Si la condici贸n no se cumple (FALSE)
     
     df <- df %>%
       separate(paired_words, c("word1", "word2"), sep = " ")
@@ -168,11 +168,11 @@ sentimentpie <- function (df){
 
 funwordcloud2 <- function(df,n,z){
   
-  #df <- df %>% plain_tweets() # Esta funci髇 es 鷗il, si solo trabajas con tweets en ingl閟
+  #df <- df %>% plain_tweets() # Esta funci贸n es 煤til, si solo trabajas con tweets en ingl茅s
   #df$text <- gsub("[^a-zA-Z0-9]","",df$text) #NADA
-  #df$text  <- gsub("[^\x01-\x7F]", "", df$text) # Esta funci髇 elimina todos los simbolos ASCII excepto los especificados
+  #df$text  <- gsub("[^\x01-\x7F]", "", df$text) # Esta funci贸n elimina todos los simbolos ASCII excepto los especificados
   df$text  <- gsub("http.*","",  df$text) # Remueve cualquier tipo de enlace
-  df$text <- sapply(df$text,function(row) iconv(row, "UTF-8", "ASCII//TRANSLIT", sub="")) #Elimina emoticonos y ac閚tos transformando todo a ASCII. 
+  df$text <- sapply(df$text,function(row) iconv(row, "UTF-8", "ASCII//TRANSLIT", sub="")) #Elimina emoticonos y ac茅ntos transformando todo a ASCII. 
   #df$text = gsub("http\\w+", "", df$text)
   
   #df$text <- gsub("https://t.co/[A-Za-z\\d]+|&amp;","", df$text)
@@ -185,7 +185,7 @@ funwordcloud2 <- function(df,n,z){
   if(n==1) {
     df <- df %>%
       select(c(screen_name,text)) %>%      #Si no hacemos select podemos destriparlo simplemente para tener todo en una palabra por fila y tweet
-      unnest_tokens(word, text) ## Si la condici髇 se cumple (TRUE)
+      unnest_tokens(word, text) ## Si la condici贸n se cumple (TRUE)
     df <- df %>%
       anti_join(custom_stop_words) %>%
       filter(!word=="t.co" %in% word)
@@ -193,7 +193,7 @@ funwordcloud2 <- function(df,n,z){
   } else {
     df  <- df %>%
       select(screen_name,text) %>%
-      unnest_tokens(paired_words, text, token = "ngrams", n = 2) ## Si la condici髇 no se cumple (FALSE)
+      unnest_tokens(paired_words, text, token = "ngrams", n = 2) ## Si la condici贸n no se cumple (FALSE)
     
     df <- df %>%
       separate(paired_words, c("word1", "word2"), sep = " ")
