@@ -170,8 +170,8 @@ server <- function(input, output,session) {
     
     funwordcloud2(req(twtList()), input$inputnum,input$size)
   }) 
-  number <- reactive(nrow(req(twtList)))
-  vecFun <- renderPrint({print(paste0( "Número de tweets analizados= ",number() ))})
+ # number <- reactive(nrow(req(twtList)))
+ # vecFun <- renderPrint({print(paste0( "Numero de tweets analizados= ",number() ))})
   
   tweet_table_data <- reactive({
     req(twtList2())
@@ -249,7 +249,7 @@ server <- function(input, output,session) {
   
   output$LDA2 <- renderPlot({TopicModeler(twtopicusers(),input$maxtopic2)})
   
-  #output$plot <- renderPlotly({plot_ly(data = pruebaspread, x=~año_dia, y=~seidor, name = 'trace 0', type = 'scatter', mode = 'lines')})
+  #output$plot <- renderPlotly({plot_ly(data = pruebaspread, x=~aÃ±o_dia, y=~seidor, name = 'trace 0', type = 'scatter', mode = 'lines')})
   
 }
 shinyApp(ui, server)      
