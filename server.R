@@ -27,10 +27,10 @@ library(shinycssloaders)
 
 
 authentication <- function (){
-    api_key <- "leG8otLsNt4344LHPvBJZPGX7"
-    api_secret_key <- "12bvZcWDp8RaooR3Gypo39VCjJS7ZSzXlLeWhiikVfB5pwARHL"
-    access_token <- "239048889-sKudn7Y4ZKxRuY1GTymKsueWLWnjcJM8UpuhXEQk"
-    access_token_secret <- "DfXPH6Aw1ngJdK5U0tmMogTNotRSZapr6KqTiOqHHDsmZ"
+    api_key <- "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    api_secret_key <- "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    access_token <- "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    access_token_secret <- "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     
     ## authenticate via web browser
     token <- create_token(
