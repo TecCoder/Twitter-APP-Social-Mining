@@ -8,7 +8,7 @@ The Twitter App social-Mining is a tool to perform queries to Twitter and retrie
 4. Topic Modeling
 
 ## APP
-You may find the application online on: [shiniapps.io](https://davidalvaro.shinyapps.io/Tweetanalyser/)
+You can find the application online on: [shiniapps.io](https://davidalvaro.shinyapps.io/Tweetanalyser/)
 
 Notice that the online version might crash when using some functions such as Topic Modeling, so you should try the off-line version instead.
 
